@@ -68,7 +68,7 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:19:35.606Z  
+**Submitted:** 2026-11-18T15:20:19.426Z  
 
 ```c_cpp
 #include <iostream>
