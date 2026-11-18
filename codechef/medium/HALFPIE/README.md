@@ -63,17 +63,41 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:16:47.609Z  
+**Submitted:** 2026-11-18T15:16:55.925Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int t;
+    cin >> t;
 
+    while (t--) {
+        int n;
+        cin >> n;
+
+        int a[100];
+        int sum = 0;
+
+        for (int i = 0; i < n; i++) {
+            cin >> a[i];
+            sum = sum + a[i];
+        }
+
+        int min_pair = a[0] + a[1];
+
+        for (int i = 1; i < n - 1; i++) {
+            if (a[i] + a[i + 1] < min_pair) {
+                min_pair = a[i] + a[i + 1];
+            }
+        }
+
+        cout << sum - (min_pair / 2) << endl;
+    }
+
+    return 0;
 }
-
 ```
 
 ---
