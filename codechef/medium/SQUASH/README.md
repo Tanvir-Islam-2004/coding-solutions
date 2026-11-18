@@ -68,17 +68,40 @@ NO
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:19:27.168Z  
+**Submitted:** 2026-11-18T15:19:35.606Z  
 
 ```c_cpp
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-	// your code goes here
+    int t;
+    cin >> t;
 
+    while (t--) {
+        int n, k;
+        cin >> n >> k;
+
+        string s;
+        cin >> s;
+
+        int min_len = 1;
+        for (int i = 1; i < n; i++) {
+            if (s[i] != s[i - 1]) {
+                min_len++;
+            }
+        }
+
+        if (k >= min_len) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
 }
-
 ```
 
 ---
